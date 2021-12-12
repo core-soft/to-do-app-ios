@@ -11,6 +11,7 @@ import SwiftUI
 struct todosApp: App {
     
     @StateObject var listViewModel: ListViewModel = ListViewModel()
+    @StateObject var itemViewModel: ItemViewModel = ItemViewModel()
     
     var body: some Scene {
         WindowGroup {
@@ -18,6 +19,7 @@ struct todosApp: App {
                 ListView()
             }
             .environmentObject(listViewModel)
+            .environmentObject(itemViewModel)
             .accentColor(Color("ReddishColor"))
         }
     }

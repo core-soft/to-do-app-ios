@@ -1,5 +1,5 @@
 //
-//  NoListsView.swift
+//  NoItemView.swift
 //  todos
 //
 //  Created by Fatih Kilit on 12.12.2021.
@@ -7,8 +7,7 @@
 
 import SwiftUI
 
-struct NoListsView: View {
-    
+struct NoItemView: View {
     @State var animate: Bool = false
     
     let orangeishColor: Color = Color("OrangeishColor")
@@ -18,16 +17,16 @@ struct NoListsView: View {
         
         ScrollView {
             VStack(spacing: 20) {
-                Text("There are no lists!")
+                Text("There are no items in the list!")
                     .font(.largeTitle)
                     .fontWeight(.semibold)
                     .foregroundColor(.primary)
                 
-                Text("Click the add button and add a topic to your list!")
+                Text("Let's add some assignment!")
                     .font(.title3)
                 
                 NavigationLink {
-                    AddListView()
+                    AddItemView()
                 } label: {
                     Text("Add Something 🤩")
                         .font(.headline)
@@ -66,12 +65,9 @@ struct NoListsView: View {
     }
 }
 
-struct NoListsView_Previews: PreviewProvider {
+struct NoItemView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
-            NoListsView()
-                .navigationTitle("Title")
-                .preferredColorScheme(.dark)
-        }
+        NoItemView()
+            .preferredColorScheme(.dark)
     }
 }

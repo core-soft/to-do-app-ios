@@ -10,6 +10,12 @@
 		3D6D96FC2765E35600377054 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6D96FB2765E35600377054 /* ListModel.swift */; };
 		3D6D96FE2765E3A200377054 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6D96FD2765E3A200377054 /* ListViewModel.swift */; };
 		3D6D97002765E62900377054 /* AddListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D6D96FF2765E62900377054 /* AddListView.swift */; };
+		3D7BFA93276651750034D308 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BFA92276651750034D308 /* ItemView.swift */; };
+		3D7BFA95276651AD0034D308 /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BFA94276651AD0034D308 /* ItemModel.swift */; };
+		3D7BFA97276653040034D308 /* ItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BFA96276653040034D308 /* ItemViewModel.swift */; };
+		3D7BFA992766566A0034D308 /* NoItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BFA982766566A0034D308 /* NoItemView.swift */; };
+		3D7BFA9B276657110034D308 /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BFA9A276657110034D308 /* AddItemView.swift */; };
+		3D7BFA9D27665EA80034D308 /* FetchItemsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7BFA9C27665EA80034D308 /* FetchItemsModel.swift */; };
 		3D90B020276291D300ACA94C /* todosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D90B01F276291D300ACA94C /* todosApp.swift */; };
 		3D90B024276291D300ACA94C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D90B023276291D300ACA94C /* Assets.xcassets */; };
 		3D90B027276291D300ACA94C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D90B026276291D300ACA94C /* Preview Assets.xcassets */; };
@@ -22,6 +28,12 @@
 		3D6D96FB2765E35600377054 /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
 		3D6D96FD2765E3A200377054 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		3D6D96FF2765E62900377054 /* AddListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddListView.swift; sourceTree = "<group>"; };
+		3D7BFA92276651750034D308 /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
+		3D7BFA94276651AD0034D308 /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
+		3D7BFA96276653040034D308 /* ItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewModel.swift; sourceTree = "<group>"; };
+		3D7BFA982766566A0034D308 /* NoItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoItemView.swift; sourceTree = "<group>"; };
+		3D7BFA9A276657110034D308 /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
+		3D7BFA9C27665EA80034D308 /* FetchItemsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchItemsModel.swift; sourceTree = "<group>"; };
 		3D90B01C276291D300ACA94C /* todos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = todos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D90B01F276291D300ACA94C /* todosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todosApp.swift; sourceTree = "<group>"; };
 		3D90B023276291D300ACA94C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +61,9 @@
 				3D6D96FF2765E62900377054 /* AddListView.swift */,
 				3DD1A4612765F4CE001E49C9 /* NoListsView.swift */,
 				3DD1A4632765FE67001E49C9 /* PlusView.swift */,
+				3D7BFA92276651750034D308 /* ItemView.swift */,
+				3D7BFA982766566A0034D308 /* NoItemView.swift */,
+				3D7BFA9A276657110034D308 /* AddItemView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -57,6 +72,8 @@
 			isa = PBXGroup;
 			children = (
 				3D6D96FB2765E35600377054 /* ListModel.swift */,
+				3D7BFA94276651AD0034D308 /* ItemModel.swift */,
+				3D7BFA9C27665EA80034D308 /* FetchItemsModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -65,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				3D6D96FD2765E3A200377054 /* ListViewModel.swift */,
+				3D7BFA96276653040034D308 /* ItemViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -177,10 +195,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				3D6D96FC2765E35600377054 /* ListModel.swift in Sources */,
+				3D7BFA9D27665EA80034D308 /* FetchItemsModel.swift in Sources */,
 				3D90B02E276295E300ACA94C /* ListView.swift in Sources */,
 				3D6D96FE2765E3A200377054 /* ListViewModel.swift in Sources */,
+				3D7BFA97276653040034D308 /* ItemViewModel.swift in Sources */,
+				3D7BFA95276651AD0034D308 /* ItemModel.swift in Sources */,
+				3D7BFA93276651750034D308 /* ItemView.swift in Sources */,
 				3D90B020276291D300ACA94C /* todosApp.swift in Sources */,
+				3D7BFA9B276657110034D308 /* AddItemView.swift in Sources */,
 				3DD1A4642765FE67001E49C9 /* PlusView.swift in Sources */,
+				3D7BFA992766566A0034D308 /* NoItemView.swift in Sources */,
 				3D6D97002765E62900377054 /* AddListView.swift in Sources */,
 				3DD1A4622765F4CE001E49C9 /* NoListsView.swift in Sources */,
 			);

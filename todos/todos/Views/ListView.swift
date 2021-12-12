@@ -13,7 +13,6 @@ struct ListView: View {
     
     var body: some View {
         ZStack {
-            
             if(listViewModel.lists.isEmpty) {
                 NoListsView()
                     .transition(AnyTransition.opacity.animation(.easeIn))
@@ -23,7 +22,7 @@ struct ListView: View {
                     ForEach(listViewModel.lists) { list in
                         NavigationLink {
                             // Go items view.
-                            Text("Items for \(list.title)")
+                            ItemView(topicId: list.id)
                         } label: {
                             Text(list.title)
                                 .font(.title3)

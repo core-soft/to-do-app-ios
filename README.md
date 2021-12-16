@@ -5,4 +5,4 @@ To Do App uygulaması IOS versiyonu
 - Main arayüz tasarlandı.
 - List oluşturma, silme, sıralama fonksiyonları yazıldı.
 - Dahili veritabanı oluşturuldu, entegre edildi.
-- Item view tamamlandı, veritabı ile uyum sağlanacak.
+- Item view tamamlandı, veritabanı ile uyum sağlanacak.

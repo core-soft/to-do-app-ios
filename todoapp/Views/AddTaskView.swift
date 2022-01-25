@@ -13,6 +13,9 @@ struct AddTaskView: View {
     @EnvironmentObject var vm: CoreDataViewModel
     @Binding var list: ListEntity
     
+    @State var alertTitle: String = ""
+    @State var showAlert: Bool = false
+    
     var body: some View {
         HStack(alignment: .center, spacing: 20) {
             TextField("Type something...", text: $titleTextField, prompt: .none)
@@ -25,8 +28,7 @@ struct AddTaskView: View {
                 .cornerRadius(10)
             
             Button {
-                vm.addTask(titleForTask: titleTextField, list: list)
-                titleTextField = ""
+                saveButtonPressed()
             } label: {
                 Text("SAVE")
                     .foregroundColor(.white)
@@ -40,5 +42,24 @@ struct AddTaskView: View {
             
         }
         .padding(.horizontal)
+        .alert(alertTitle, isPresented: $showAlert) {
+            Button("OK", role: .cancel) {}
+        }
+    }
+    
+    func saveButtonPressed() {
+        if textIsAppropriate() {
+            vm.addTask(titleForTask: titleTextField, list: list)
+            titleTextField = ""
+        }
+    }
+    
+    func textIsAppropriate() -> Bool {
+        if titleTextField.count < 1 {
+            alertTitle = "New task must be at least one character long! 😭"
+            showAlert.toggle()
+            return false
+        }
+        return true
     }
 }

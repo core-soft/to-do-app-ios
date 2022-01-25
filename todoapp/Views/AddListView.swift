@@ -12,6 +12,9 @@ struct AddListView: View {
     @State var titleTextField: String = ""
     @EnvironmentObject var vm: CoreDataViewModel
     
+    @State var showAlert: Bool = false
+    @State var alertTitle: String = ""
+    
     var body: some View {
         HStack(alignment: .center, spacing: 20) {
             TextField("Type something...", text: $titleTextField, prompt: .none)
@@ -24,9 +27,7 @@ struct AddListView: View {
                 .cornerRadius(10)
             
             Button {
-                vm.addList(titleForList: titleTextField)
-                titleTextField = ""
-                
+                saveButtonPressed()
             } label: {
                 Text("SAVE")
                     .foregroundColor(.white)
@@ -39,5 +40,24 @@ struct AddListView: View {
             }
         }
         .padding(.horizontal)
+        .alert(alertTitle, isPresented: $showAlert) {
+            Button("OK", role: .cancel) {}
+        }
+    }
+    
+    func saveButtonPressed() {
+        if textIsAppropriate() {
+            vm.addList(titleForList: titleTextField)
+            titleTextField = ""
+        }
+    }
+    
+    func textIsAppropriate() -> Bool {
+        if titleTextField.count < 1 {
+            alertTitle = "New list must be at least one character long! 😭"
+            showAlert.toggle()
+            return false
+        }
+        return true
     }
 }
